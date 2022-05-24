@@ -33,15 +33,15 @@ public class Coordinates{
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Coordinates){
-<<<<<<< HEAD
             Coordinates c = (Coordinates) obj;
-=======
-            Coordinates c = (Coordinates)obj;
->>>>>>> 45c555da9b90ed509e5d7a5d53f81fe559193d83
             if ((c.getX() == this.x) && c.getY() == this.y) {
                 return true;
             }
         }
         return false;
+    }
+    @Override
+    public String toString() {
+        return "[" + this.x + ", " + this.y + "]";
     }
 }
