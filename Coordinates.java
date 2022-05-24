@@ -30,18 +30,22 @@ public class Coordinates{
         int y1 = random.nextInt(column-1) + 1;
         return new Coordinates(x1, y1);
     }
+    public Coordinates moveCoordinates (Direction d, int pixel){
+        int x1 = 0, y1 = 0;
+        if ( d.equals(Direction.UP))
+            y1 += this.y + pixel;
+        if (d.equals(Direction.DOWN))
+            y1 = this.y - pixel;
+        if ( d.equals(Direction.RIGHT))
+            x1 = this.x + pixel;
+        if (d.equals(Direction.LEFT))
+            x1 = this.x - pixel;
+        return new Coordinates(x1, y1);
+    }
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Coordinates){
-<<<<<<< HEAD
-<<<<<<< HEAD
             Coordinates c = (Coordinates) obj;
-=======
-            Coordinates c = (Coordinates)obj;
->>>>>>> 142a92303fe1f4c3083146417d8955c14c9fcb7e
-=======
-            Coordinates c = (Coordinates)obj;
->>>>>>> f382d5077ff2c4fb914717b7ff1f8796cc954661
             if ((c.getX() == this.x) && c.getY() == this.y) {
                 return true;
             }
