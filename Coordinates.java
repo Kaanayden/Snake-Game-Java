@@ -33,7 +33,15 @@ public class Coordinates{
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Coordinates){
+<<<<<<< HEAD
+<<<<<<< HEAD
+            Coordinates c = (Coordinates) obj;
+=======
             Coordinates c = (Coordinates)obj;
+>>>>>>> 142a92303fe1f4c3083146417d8955c14c9fcb7e
+=======
+            Coordinates c = (Coordinates)obj;
+>>>>>>> f382d5077ff2c4fb914717b7ff1f8796cc954661
             if ((c.getX() == this.x) && c.getY() == this.y) {
                 return true;
             }
