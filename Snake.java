@@ -14,12 +14,13 @@ private Direction direction;
 
 public Snake( int length, Coordinates headPosition, Direction direction ) {
 
-    coordinates.add( headPosition );
+    this.coordinates.add( headPosition );
     this.direction = direction;
     for( int i = 1; i < length; i++ ) {
-        coordinates.add(  );
+        coordinates.add( headPosition.moveCoordinates( this.direction, i ) );
     }
     
+
 
 }
 
