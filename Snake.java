@@ -20,8 +20,22 @@ public Snake( int length, Coordinates headPosition, Direction direction ) {
         coordinates.add( headPosition.moveCoordinates( this.direction, i ) );
     }
     
+}
 
+public void turnDirection() {
+    if( this.direction.equals( Direction.UP ) ) {
+        direction = Direction.RIGHT;
+    } else if( this.direction.equals( Direction.RIGHT ) ) {
+        direction = Direction.DOWN;
+    } else if( this.direction.equals( Direction.DOWN ) ) {
+        direction = Direction.LEFT;
+    } else if( this.direction.equals( Direction.LEFT ) ) {
+        direction = Direction.UP;
+    }
+}
 
+public void grow() {
+    
 }
 
 
