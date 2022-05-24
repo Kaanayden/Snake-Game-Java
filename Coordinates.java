@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 public class Coordinates{
     private int x;
     private int y;
@@ -33,3 +34,8 @@ public class Coordinates{
         return false;
     }
 }
+=======
+public class Coordinates {
+    
+}
+>>>>>>> 104c83c41ab1827e8d796ae946e1423cf593904b
