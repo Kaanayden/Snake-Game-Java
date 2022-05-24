@@ -30,6 +30,18 @@ public class Coordinates{
         int y1 = random.nextInt(column-1) + 1;
         return new Coordinates(x1, y1);
     }
+    public Coordinates changedCoordinates (Direction d, int pixel){
+        int x1 = 0, y1 = 0;
+        if ( d.equals("UP"))
+            y1 += this.y + pixel;
+        if (d.equals("DOWN"))
+            y1 = this.y - pixel;
+        if ( d.equals("RIGHT"))
+            x1 = this.x + pixel;
+        if (d.equals("LEFT"))
+            x1 = this.x - pixel;
+        return new Coordinates(x1, y1);
+    }
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Coordinates){
