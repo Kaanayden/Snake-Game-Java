@@ -34,8 +34,39 @@ public void turnDirection() {
     }
 }
 
-public void grow() {
+//execute when snake eats an apple
+private void grow() {
+    coordinates.add(  )
+}
+
+private Coordinates getHead() {
+    return coordinates.get( 0 );
+}
+
+private boolean checkDeath( ArrayList<Coordinates> obstacles ) {
+    Coordinates head = getHead();
+    for( Coordinates obstacle : obstacles ) {
+        if( obstacle.equals( head ) ) {
+            return true;
+        }
+    }
+
+    for( Coordinates coordinate : this.coordinates ) {
+            if( coordinate.equals( head ) ) {
+                return true;
+            }
+    }
+
+    return false;
+}
+
+// true if its alive false if its dead
+public boolean update( ArrayList<Coordinates> obstacle ) {
     
+    if( checkDeath( obstacles ) ) {
+
+    }
+
 }
 
 
