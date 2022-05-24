@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Coordinates{
     private int x;
     private int y;
@@ -22,10 +24,16 @@ public class Coordinates{
     private int getY(){
         return this.y;
     }
+    public static Coordinates randomCoordinates (int column, int row){
+        Random random = new Random();
+        int x1 = random.nextInt(column-1) + 1;
+        int y1 = random.nextInt(column-1) + 1;
+        return new Coordinates(x1, y1);
+    }
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Coordinates){
-            Coordinates c = new Coordinates((Coordinates)obj);
+            Coordinates c = (Coordinates)obj;
             if ((c.getX() == this.x) && c.getY() == this.y) {
                 return true;
             }
